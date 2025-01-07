@@ -8,6 +8,8 @@ import InvestorCrud from "./pages/InvestorCrud";
 import UpdateInvestor from "./pages/UpdateInvestor";
 import CreateInvestor from "./pages/CreateInvestor";
 import GetAllUsers from "./pages/GetAllUsers";
+import InvestorProfile from "./pages/InvestorProfile";
+
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -62,6 +64,7 @@ const App = () => {
             
             <Route path="/investors" element={<InvestorCrud />} />
             <Route path="/create-investor" element={<CreateInvestor />} />
+            <Route path="/investor/:id" element={<InvestorProfile />} />
             <Route path="api/update-investor/:id" element={<UpdateInvestor />} />
             <Route path="/users" element={<GetAllUsers />} />
           </Routes>
